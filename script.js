@@ -12,4 +12,14 @@ function gridCreate(nSides) {
 	}
 }
 
+function buttonEvent() {
+	const children = container.children
+	let child = container.lastElementChild
+	while (child) {
+		container.removeChild(child);
+		child = container.lastElementChild;
+	}
+	const sides = Number(prompt('How many sides should it have?', '8'));
+	gridCreate(sides);
+}
 gridCreate(16);
